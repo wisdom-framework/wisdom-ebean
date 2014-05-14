@@ -198,7 +198,7 @@ public class EbeanExtender implements BundleTrackerCustomizer<EbeanRepository> {
      */
     private DataSource lookupForDataSource(Bundle bundle) {
         //TODO This is not very dynamic...
-        DataSource source = sources.getDataSource(bundle.getSymbolicName());
+        DataSource source = sources.getDataSource(bundle.getHeaders().get("Bundle-Name"));
         if (source == null) {
             source = sources.getDataSource(); // Get the default one.
         }

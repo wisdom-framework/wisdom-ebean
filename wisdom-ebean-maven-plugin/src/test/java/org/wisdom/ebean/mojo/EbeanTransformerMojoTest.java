@@ -37,6 +37,6 @@ public class EbeanTransformerMojoTest {
         assertThat(EbeanTransformerMojo.computeHeader(ImmutableList.of(
                 EbeanTransformerMojo.class.getName(),
                 List.class.getName())))
-                .isEqualTo(EbeanTransformerMojo.class.getName() + ", " + List.class.getName());
+                .isEqualTo(EbeanTransformerMojo.class.getName() + "," + List.class.getName());
     }
 }

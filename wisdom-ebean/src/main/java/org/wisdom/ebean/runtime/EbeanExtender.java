@@ -177,7 +177,7 @@ public class EbeanExtender implements BundleTrackerCustomizer<EbeanRepository> {
         List<Class<?>> list = new ArrayList<>();
         for (String s : classes) {
             try {
-                Class c = bundle.loadClass(s.trim());
+                Class c = bundle.loadClass(s);
                 list.add(c);
             } catch (ClassNotFoundException e) {
                 throw new ClassNotFoundException("Cannot load entity class " + s + " from bundle " + bundle
